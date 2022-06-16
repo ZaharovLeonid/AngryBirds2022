@@ -1,0 +1,62 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid x:Name="myGrid" Background="BlanchedAlmond" RenderTransformOrigin="0.555,0.775">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="188*"/>
+            <RowDefinition Height="231*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="189*"/>
+                <RowDefinition Height="230*"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="245*"/>
+                <ColumnDefinition Width="446*"/>
+                <ColumnDefinition Width="100">
+                </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+        </Grid>
+
+
+        <Canvas x:Name="Bird1">
+            <Ellipse  x:Name="Bird" Fill="Red" Width="30" Height="30" Canvas.Left="10" Canvas.Top="300" />
+            <Rectangle x:Name="Target" Fill="Yellow" Width="30" Height="30" Canvas.Left="750" Canvas.Top="250"/>
+
+        </Canvas>
+        <TextBlock Background="BlanchedAlmond" x:Name="Oshko" FontSize="25" Canvas.Left="372" TextWrapping="Wrap" Text="0" Canvas.Top="21" FontFamily="Trebuchet MS" Margin="373,25,374,86" Panel.ZIndex="-6" />
+
+
+
+
+
+
+        <StackPanel Grid.Column ="2"  x:Name="Cord_y" Margin="250,47,438,151" Background="Azure" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.591,0.711" Grid.RowSpan="2">
+            <StackPanel.Effect>
+                <DropShadowEffect/>
+            </StackPanel.Effect>
+        </StackPanel>
+
+        <TextBlock Grid.Column="1" Text="Введите угол в градусах" Margin="14,110,603,52"/>
+        <TextBlock Grid.Column="1" Text="Введите скорость" Margin="14,31,606,120"/>
+
+        <TextBox  Text=""  x:Name="str_velosity" FontSize="15" Margin="0,55,582,86" HorizontalAlignment="Right" Width="197" />
+        <TextBox Text="" x:Name="str_angle" FontSize="15" Margin="0,133,581,9" HorizontalAlignment="Right" Width="197" />
+        <Button Grid.Column="1" Grid.Row="2" Content="Fire" x:Name="on_Fire" Margin="5,49,590,149" Click="Button_Click" />
+
+        
+        <TextBlock HorizontalAlignment="Left" Margin="284,12,0,0" TextWrapping="Wrap" Text="Score:" FontSize="30" VerticalAlignment="Top" Height="73" Width="309"/>
+
+
+
+
+    </Grid>
+</Window>
